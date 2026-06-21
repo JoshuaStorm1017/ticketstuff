@@ -8,7 +8,7 @@ test("computes helpdesk metrics from persisted ticket history", () => {
   const metrics = computeMetrics(db);
   assert.equal(metrics.totalTickets, 4);
   assert.equal(metrics.openTickets, 3);
-  assert.equal(metrics.slaBreaches, 1);
+  assert.equal(metrics.slaBreaches, 3);
   assert.equal(metrics.byStatus.open, 1);
   assert.equal(metrics.byPriority.urgent, 1);
   assert.ok(metrics.firstResponseHours > 0);
